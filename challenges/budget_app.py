@@ -62,7 +62,6 @@ def create_spend_chart(categories):
         filtered_tx = filter(lambda c: c['amount'] < 0 and "Transfer" not in c["description"], category.ledger)
         category_withdrawals = sum(tx['amount'] for tx in filtered_tx)
         withdrawals.append(category_withdrawals)
-        print(withdrawals)
     total_spend = sum(withdrawals)
     percentage_spend = [round((withdrawal / total_spend * 100) // 10) * 10 for withdrawal in withdrawals]
     
