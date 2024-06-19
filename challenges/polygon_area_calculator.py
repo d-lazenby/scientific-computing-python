@@ -58,9 +58,9 @@ class Square(Rectangle):
         self.height = new_side
         self.width = new_side
 
-# rect = Rectangle(width=49, height=3)
-# print(rect.get_picture())
-# print(rect)
+rect = Rectangle(width=49, height=3)
+print(rect.get_picture())
+print(rect)
 
 square = Square(side=3)
 print(square)
